@@ -1,0 +1,5 @@
+*.bytex
+*.bytex linguist-language=asm
+*.bytex linguist-detectable=true
+*.js linguist-detectable=false
+*.ts linguist-detectable=false
