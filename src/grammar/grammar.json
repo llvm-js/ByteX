@@ -1,0 +1,149 @@
+{
+    "include": [
+        { "token": "HASH" },
+        { "token": "IDENTIFER" },
+        { "token": "STRING" }
+    ],
+
+    "VariableRecord": [
+        { "token": "IDENTIFER" },
+        { "token": "COLON" },
+
+        {
+            "or": [
+                { "token": "NUMBER" },
+                { "token": "STRING" }
+            ] 
+        }
+    ],
+
+    "SegmentExpression": [
+        { "token": "IDENTIFER" },
+        { "token": "IDENTIFER" },
+        { "token": "COLON" }
+    ],
+
+    "FunctionDeclaration": [
+        { "token": "IDENTIFER" },
+        { "token": "IDENTIFER" },
+        { "token": "COLON" }
+    ],
+
+    "LabelExpression": [
+        { "token": "IDENTIFER" },
+        { "token": "IDENTIFER" },
+        { "token": "COLON" }
+    ],
+
+    "Inctruction": {
+        "mov@1": [
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "IDENTIFER" },
+                    { "token": "NUMBER" },
+                    { "token": "STRING" }
+                ]
+            }
+        ],
+
+        "mov@2": [
+            { "token": "IDENTIFER" },
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "IDENTIFER" },
+                    { "token": "NUMBER" },
+                    { "token": "STRING" }
+                ]
+            }
+        ],
+
+        "sct": [
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "IDENTIFER" },
+                    { "token": "NUMBER" }
+                ]
+            }
+        ],
+
+        "logic": [
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "IDENTIFER" },
+                    { "token": "NUMBER" }
+                ]
+            },
+
+            
+            {
+                "or": [
+                    { "token": "IDENTIFER" },
+                    { "token": "NUMBER" }
+                ]
+            }
+        ],
+
+        "jumpCondition": [
+            { "token": "IDENTIFER" },
+            { "token": "IDENTIFER" }
+        ],
+
+        "func": [
+            { "token": "IDENTIFER" },
+            { "token": "IDENTIFER" }
+        ],
+
+        "goto": [
+            { "token": "IDENTIFER" },
+            { "token": "IDENTIFER" }
+        ],
+
+        "push@1": [
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "IDENTIFER" },
+                    { "token": "NUMBER" },
+                    { "token": "STRING" }
+                ]
+            }
+        ],
+
+        "call": [
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "NUMBER" }
+                ]
+            }
+        ],
+
+        "math": [
+            { "token": "IDENTIFER" },
+
+            {
+                "or": [
+                    { "token": "NUMBER" },
+                    { "token": "IDENTIFER" }
+                ]
+            },
+
+            {
+                "or": [
+                    { "token": "NUMBER" },
+                    { "token": "IDENTIFER" }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,58 @@
+segment variable:
+    start: "Start Program (IR)"
+    text: "Hello ByteX AsmX!"
+    fact: "factorial: "
+
+segment const:
+    example: 'this constant section'
+
+func print:
+    push $0              ; $0 - zero arg   
+    call 4               ; 0x04 - print
+    pop
+
+label greater:
+    mov $0 "greater"
+    func print
+    quit
+
+label less:
+    mov $0 "less"
+    func print
+    quit
+
+main code:
+    mov $0 [start]      ; push variable start
+    func print          ; call func print
+
+    sct 0
+    mov $0 [text]       ; $0 - zero arg --> $0 = 'call 1'
+    func print          ; call func print
+
+    sct 1               ; 0 - var  1 - const  2 - func 3 - label (section - sct)
+    mov $0 [example]    ; const example
+    func print          ; call func print
+
+    ; add 4 3
+    ; mov $0 $r1
+    ; func print ; 3 instructions
+    ; ; jmp 2
+
+    ; pull
+    ; mov $0 $r1
+    ; func print
+
+    ; atan 56 7
+    ; mov $0 $r1
+    ; func print
+
+    push 1
+    push 5
+    rand
+    mov $0 $r1
+    func print
+
+    cmp 5 4
+    jmpg greater
+    jmpz less
+

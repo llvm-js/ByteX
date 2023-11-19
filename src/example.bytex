@@ -1,0 +1,11 @@
+main proc:
+    mov $r1 5
+    shl $r1 1
+    push $r1
+    call 4
+
+main proc:
+    mov $r1 5
+    shr $r1 1
+    push $r1
+    call 4
